@@ -30,12 +30,12 @@ const fs = require('fs');
     await page.close();
   }
 
-  fs.writeFileSync('report_scripts_homepages.json', JSON.stringify(results, null, 2));
+  fs.writeFileSync('report_scripts_fyc.json', JSON.stringify(results, null, 2));
   let md = `| URL | Missing Scripts | Error |\n| --- | --------------- | ----- |\n`;
   for (const res of results) {
     md += `| [${res.url}](${res.url}) | ${res.missing && res.missing.length ? res.missing.join(', ') : 'None'} | ${res.error ? res.error : ''} |\n`;
   }
-  fs.writeFileSync('report_scripts_homepages.md', md);
+  fs.writeFileSync('report_scripts_fyc.md', md);
   console.log('==== Script Check Results ====');
   console.log(md);
   await browser.close();
