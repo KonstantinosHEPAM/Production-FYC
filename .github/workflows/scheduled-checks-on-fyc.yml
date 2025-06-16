@@ -26,8 +26,8 @@ jobs:
         with:
           name: scripts-check-report
           path: |
-            report_scripts_homepages.json
-            report_scripts_homepages.md
+            report_scripts_fyc.json
+            report_scripts_fyc.md
 
       - name: Run datalayer event checks
         run: node check_datalayer_events.js
@@ -37,5 +37,5 @@ jobs:
         with:
           name: datalayer-check-report
           path: |
-            report_datalayer_homepages.json
-            report_datalayer_homepages.md
+            report_datalayer_fyc.json
+            report_datalayer_fyc.md
