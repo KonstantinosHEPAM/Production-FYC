@@ -1,0 +1,40 @@
+{
+  "urls": [
+    "https://www.msccruisesusa.com/Search%20Result",
+    "https://www.msccruzeiros.com.br/Search%20Result",
+    "https://www.msccrociere.it/Search%20Result",
+    "https://www.msccruises.co.uk/Search%20Result",
+    "https://www.msccruises.de/Search%20Result",
+    "https://www.msccroisieres.fr/Search%20Result",
+    "https://www.msccruises.co.za/Search%20Result",
+    "https://www.msccruceros.es/Search%20Result",
+    "https://www.msccruises.com/int/Search%20Result",
+    "https://www.msccruises.ch/Search%20Result",
+    "https://www.msccruises.ca/Search%20Result",
+    "https://www.msccruises.fi/Search%20Result",
+    "https://www.msccruises.dk/Search%20Result",
+    "https://www.msccruises.no/Search%20Result",
+    "https://www.msccruises.se/Search%20Result",
+    "https://www.msccruises.nl/Search%20Result",
+    "https://www.msccruises.be/Search%20Result",
+    "https://www.msccruises.com.au/Search%20Result",
+    "https://www.msccruises.co.nz/Search%20Result",
+    "https://www.msccruzeiros.pt/Search%20Result",
+    "https://www.msccruceros.cl/Search%20Result",
+    "https://www.msccruises.ie/Search%20Result",
+    "https://www.msccruceros.com.ar/Search%20Result",
+    "https://www.msccruises.at/Search%20Result",
+    "https://www.msccruises.ca/fr/Search%20Result",
+    "https://www.msccruceros.com/Search%20Result"
+  ],
+  "scripts": [
+    "mymscapp",
+    "sdk.privacy-center",
+    "app-lon05.marketo",
+    "rtp-api/v1/rtp.js",
+    "GTM-W4JBLF7",
+    "GTM-TDFBBD79",
+    "try.abtasty",
+    "https://assets.adobedtm.com/e89550510280/83e8aacd5ad3/launch-8a896a2706b5.min.js"
+  ]
+}
