@@ -1,4 +1,4 @@
-name: Scheduled Check Scripts and DataLayer Events on Homepages
+name: Scheduled Check Scripts and DataLayer Events on FYC
 
 on:
   schedule:
