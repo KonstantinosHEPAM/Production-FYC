@@ -66,12 +66,12 @@ const fs = require('fs');
     await page.close();
   }
 
-  fs.writeFileSync('report_datalayer_homepages.json', JSON.stringify(results, null, 2));
+  fs.writeFileSync('report_datalayer_fyc.json', JSON.stringify(results, null, 2));
   let md = `| URL | didomi-consent | didomi-ready | view_item_list | Error |\n| --- | -------------- | ------------ | -------------- | ----- |\n`;
   for (const res of results) {
     md += `| [${res.url}](${res.url}) | ${res.didomiConsent ? '✅' : '❌'} | ${res.didomiReady ? '✅' : '❌'} | ${res.viewItemList ? '✅' : '❌'} | ${res.error ? res.error : ''} |\n`;
   }
-  fs.writeFileSync('report_datalayer_homepages.md', md);
+  fs.writeFileSync('report_datalayer_fyc.md', md);
   console.log('==== Didomi DataLayer Event Results ====');
   console.log(md);
 
