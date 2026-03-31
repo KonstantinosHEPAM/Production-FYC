@@ -1,4 +1,4 @@
-name: Check Scripts on FYC
+name: Check DataLayer Events on FYC
 
 on:
   workflow_dispatch:
@@ -6,8 +6,9 @@ on:
     branches: [ main ]
 
 jobs:
-  run-script-checks:
+  run-datalayer-checks:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,16 +21,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run script checks
-        run: npm run test:scripts
+      - name: Run DataLayer event checks
+        run: npm run test:datalayer
 
       - name: Add summary
-        run: cat report_scripts_fyc.md >> $GITHUB_STEP_SUMMARY
+        if: always()
+        run: cat report_datalayer_fyc.md >> $GITHUB_STEP_SUMMARY || echo "No report generated"
 
       - name: Upload results artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: report-scripts-fyc
+          name: report-datalayer-fyc
           path: |
-            report_scripts_fyc.json
-            report_scripts_fyc.md
+            report_datalayer_fyc.json
+            report_datalayer_fyc.md
