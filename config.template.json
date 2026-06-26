@@ -1,0 +1,53 @@
+{
+  "testName": "Production-FYC Tests",
+  "description": "Test suite for FYC production website",
+  "urls": [
+    "https://www.msccruisesusa.com/Search%20Result",
+    "https://www.msccroisieres.fr/Search%20Result",
+    "https://www.msccruises.com/int/Search%20Result"
+  ],
+  "scripts": [
+    {
+      "name": "GTM - Google Tag Manager",
+      "snippet": "GTM-W4JBLF7",
+      "description": "Primary GTM container"
+    },
+    {
+      "name": "Didomi - Privacy Center",
+      "snippet": "sdk.privacy-center",
+      "description": "Consent management"
+    },
+    {
+      "name": "Marketo - Lead Capture",
+      "snippet": "app-lon05.marketo",
+      "description": "Marketing automation"
+    }
+  ],
+  "events": [
+    {
+      "name": "didomi-consent",
+      "description": "User consent decision",
+      "required": true
+    },
+    {
+      "name": "didomi-ready",
+      "description": "Didomi SDK ready",
+      "required": true
+    },
+    {
+      "name": "view_item_list",
+      "description": "Product list view event",
+      "required": true
+    }
+  ],
+  "timeout": {
+    "script": 25000,
+    "navigation": 25000,
+    "pageWait": 3000,
+    "total": 720000
+  },
+  "output": {
+    "reportFormat": "both",
+    "publishResults": true
+  }
+}
